@@ -14,11 +14,11 @@ import br.com.wellington.mvc.mudi.repository.PedidoRepository;
 public class HomeController {
 	
 	@Autowired
-	private PedidoRepository PedidoRepository;
+	private PedidoRepository pedidosRepository;
 	
 	@GetMapping("/home")
 	public String home(Model model) {
-		List<Pedido> pedidos = PedidoRepository.findAll();
+		List<Pedido> pedidos = pedidosRepository.findAll();
 		model.addAttribute("pedidos", pedidos);
 		
 		return "home";
