@@ -1,6 +1,7 @@
 package br.com.wellington.mvc.mudi.dto;
 
 import br.com.wellington.mvc.mudi.model.Pedido;
+import br.com.wellington.mvc.mudi.model.StatusPedido;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -48,6 +49,7 @@ private String nomeProduto;
 		pedido.setNomeProduto(nomeProduto);
 		pedido.setUrlImagem(urlImagem);
 		pedido.setUrlProduto(urlProduto);
+		pedido.setStatus(StatusPedido.AGUARDANDO);
 		return pedido;
 	}
 	
